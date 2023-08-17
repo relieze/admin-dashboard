@@ -17,11 +17,11 @@ html, body, .dashboard {
 }
 
 .header {
+  padding: 10px 30px;
   grid-area: 1 / 2 / 2 / 3;
-  background-color: lightsteelblue;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 10px;
+  gap: 20px;
 }
 
 .sidebar {
@@ -34,31 +34,45 @@ html, body, .dashboard {
   background-color: lightskyblue;
 }
 
-.top-section, .bottom-section {
-  background-color: white;
+.top-section, .bottom-section, .welcome, .action-buttons {
   display: flex;
   align-items: center;
+  gap: 20px;
 }
 
 .search-icon, .notification-icon {
-  width: 30px;
+  width: 20px;
+}
+
+input {
+  background-color: lightgray;
+  border-radius: 30px;
+  padding: 3px 20px;
+  margin: 0 20% 0 0;
+  flex: 1;
+  font-size: 1.25rem;
 }
 
 .profile-photo {
-  width: 80px;
+  width: 75px;
   border-radius: 50%;
 }
 
+.top-section .profile-photo {
+  width: 50px;
+}
+
+.log-out, .action-buttons button {
+  padding: .5em 1.5em;
+  border-radius: 30px;
+  font-size: 1.25rem;
+}
+
 .welcome {
-  width: fit-content;
-  display: flex;
-  align-items: center;
+  flex: 1;
 }
 
-.action-buttons {
-  display: flex;
-  align-items: center;
+.action-buttons button {
+  font-size: 1.2rem;
 }
-
-
 
