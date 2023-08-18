@@ -4,6 +4,7 @@
   padding: 0;
   border: none;
   text-decoration: none;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 html, body, .dashboard {
@@ -12,26 +13,26 @@ html, body, .dashboard {
 
 .dashboard {
   display: grid;
-  grid-template: min-content 1fr / 250px 1fr;
-  gap: 20px;
+  grid-template: min-content 1fr / min-content 1fr;
 }
 
 .header {
+  background-color: hsl(120, 100%, 92%);
   padding: 10px 30px;
   grid-area: 1 / 2 / 2 / 3;
   display: grid;
   grid-template-rows: 1fr 1fr;
-  gap: 20px;
+  gap: 5px;
 }
 
 .sidebar {
   background-color: hsl(271, 56%, 63%);
   color: hsl(0, 0%, 99%);
-  padding: 25px;
+  padding: 20px;
   grid-area: 1 / 1 / 3 / 2;
   display: grid;
   grid-auto-rows: min-content;
-  gap: 60px;
+  gap: 40px;
   align-items: start;
 }
 
@@ -55,42 +56,37 @@ html, body, .dashboard {
 input {
   background-color: lightgray;
   border-radius: 30px;
+  width: min(800px, 40%);
   padding: 3px 20px;
-  margin: 0 20% 0 0;
-  flex: 1;
-  font-size: 1.25rem;
+  margin-right: auto;
+  font-size: 1.125rem;
 }
 
 .profile-photo {
-  width: 75px;
+  width: 70px;
   border-radius: 50%;
 }
 
 .top-section .profile-photo {
-  width: 50px;
+  width: 45px;
 }
 
 .log-out, .action-buttons button {
   padding: .5em 1.5em;
   border-radius: 30px;
-  font-size: 1.25rem;
+  font-size: .8rem;
 }
 
 .welcome {
   flex: 1;
 }
 
-.action-buttons button {
-  font-size: 1.2rem;
-}
-
 .heading {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: -40px;
-  font-size: 2rem;
-  gap: 10px;
+  font-size: 1.5rem;
+  gap: 8px;
 }
 
 .logo {
@@ -100,13 +96,13 @@ input {
 .nav {
   display: grid;
   grid-template-columns: min-content min-content;
-  gap: 20px;
+  gap: 1rem;
   align-items: center;
-  font-size: 1.25rem;
+  font-size: 1.125rem;
 }
 
 .nav img {
-  width: 25px;
+  width: 1.5rem;
 }
 
 .updates div, .trends div {
@@ -116,9 +112,9 @@ input {
 .projects {
   padding: 20px;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(100px, 300px));
+  grid-template-columns: repeat(auto-fit, minmax(275px, 1fr));
   grid-template-rows: max-content;
-  grid-auto-rows: minmax(100px, 1fr);
+  grid-auto-rows: 200px;
   gap: 30px;
 }
 
