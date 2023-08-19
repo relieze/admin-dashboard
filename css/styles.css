@@ -210,6 +210,14 @@ input:focus {
   border-radius: 0px 10px 10px 0px;
 }
 
+.project .action-buttons {
+  text-align: right;
+}
+
+.project img {
+  width: 30px;
+}
+
 .featured {
   padding: 30px 30px 30px 0;
   display: grid;
