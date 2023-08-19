@@ -17,17 +17,12 @@ html, body, .dashboard {
 }
 
 .header {
-  background-color: hsl(120, 100%, 92%);
   padding: 10px 30px;
-  grid-area: 1 / 2 / 2 / 3;
-  display: grid;
-  grid-template-rows: 1fr 1fr;
-  gap: 5px;
 }
 
 .sidebar {
-  background-color: hsl(271, 56%, 63%);
-  color: hsl(0, 0%, 99%);
+  background-color: hsl(270, 54%, 33%);
+  color: white;
   padding: 20px;
   grid-area: 1 / 1 / 3 / 2;
   display: grid;
@@ -43,23 +38,15 @@ html, body, .dashboard {
   grid-template-columns: 3fr 1fr;
 }
 
-.top-section, .bottom-section, .welcome, .action-buttons {
+.header, .welcome {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 10px;
 }
 
-.search-icon, .notification-icon {
-  width: 20px;
-}
+.header>*:not(.welcome) {
+  margin-bottom: -10px;
 
-input {
-  background-color: lightgray;
-  border-radius: 30px;
-  width: min(800px, 40%);
-  padding: 3px 20px;
-  margin-right: auto;
-  font-size: 1.125rem;
 }
 
 .profile-photo {
@@ -67,18 +54,88 @@ input {
   border-radius: 50%;
 }
 
-.top-section .profile-photo {
-  width: 45px;
-}
-
-.log-out, .action-buttons button {
-  padding: .5em 1.5em;
-  border-radius: 30px;
-  font-size: .8rem;
+h1 {
+  /* width: clamp(min-content, min-content, max-content); */
+  overflow: hidden;
+  width: fit-content;
+  flex: 1;
 }
 
 .welcome {
   flex: 1;
+}
+
+.search-icon {
+  margin-left: 35px;
+}
+
+.search-icon, .notification-icon {
+  width: 20px;
+}
+
+input {
+  width: 120px;
+  border: solid 2px black;
+  border-radius: 30px;
+  padding: 3px 20px;
+  transition: all 2s;
+  margin-right: 20px;
+}
+
+input:focus {
+  background-color: hsl(206, 100%, 90%);
+  font-size: 1.125rem;
+  width: calc(150px + 16%);
+}
+
+/* Styles for the dropdown container */
+.dropdown {
+  position: relative;
+}
+
+/* Style for the dropdown button */
+.dropbtn {
+  min-width: max-content;
+  padding: .5em 1.5em;
+  color: white;
+  background-color: #A50104;
+  font-size: .8rem;
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.30) ;
+  border-radius: 10px 10px 0px 0px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
+/* Style for the dropdown content */
+.dropdown-content {
+  min-width: 120px;
+  display: none;
+  position: absolute;
+  z-index: 1;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.35);
+  border-radius: 0 0 8px 8px;
+  overflow: hidden;
+}
+
+/* Style for the dropdown content buttons */
+.dropdown-content button {
+  text-transform: uppercase;
+  background-color: white;
+  padding: 10px;
+  text-align: left;
+  display: block;
+  width: 100%;
+  cursor: pointer;
+}
+
+.dropdown-content button:not(.dropdown-content button:last-child) {
+  border-bottom: 2px solid #A50104;
+
+}
+
+/* Show the dropdown content on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 .heading {
@@ -103,6 +160,7 @@ input {
 
 .nav img {
   width: 1.5rem;
+  filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(93deg) brightness(103%) contrast(103%);
 }
 
 .updates div, .trends div {
