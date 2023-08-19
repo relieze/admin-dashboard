@@ -35,9 +35,11 @@ html, body, .dashboard {
 
 .main {
   grid-area: 2 / 2 / 3 / 3;
-  background-color: hsl(210, 100%, 92%);
   display: grid;
   grid-template-columns: 3fr 1fr;
+  background-image: url(../images/lebron-and-dwade.png);
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 .header, .welcome {
@@ -180,7 +182,14 @@ input:focus {
 
 .projects>h3 {
   grid-column: 1 / -1;
-  color: hsl(270, 54%, 33%);
+  color: white;
+  color: white;
+  font-size: 20px;
+  text-shadow:
+      0.07em 0 black,
+      0 0.07em black,
+      -0.07em 0 black,
+      0 -0.07em black;
   margin-left: 1%;
 }
 
@@ -209,7 +218,14 @@ input:focus {
 }
 
 .featured h3 {
-  color: hsl(270, 54%, 33%);
+  color: white;
+  color: white;
+  font-size: 20px;
+  text-shadow:
+      0.07em 0 black,
+      0 0.07em black,
+      -0.07em 0 black,
+      0 -0.07em black;
   margin-left: 1%;
   margin: 0px 0px 20px 0px; 
 }
